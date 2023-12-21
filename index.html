@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>namora cmg </title>
+    <style>
+       * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .btn {
+            background-color: rgba(3, 3, 3, 0.856);
+            color: white;
+            font: 300 40px 'Poppins', sans-serif;
+            padding: 15px 30px;
+            border-radius: 15px;
+            transition: ease-in-out 0.4s;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .tituloPrincipal {
+            font: 700 48px 'Poppins', sans-serif;
+        }
+
+        .titulo {
+            text-align: center;
+            padding-bottom: 50px;
+            margin-top: 30px;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 200px;
+        }
+        .cachorrinho{
+            margin-top: 180px;
+            width: 300px;
+        }
+        @media screen and (max-width: 400px) {
+            .botoes{
+                margin: 0;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+        function sim(){
+            location.href = "https://www.youtube.com/watch?v=Jr6LyMe5BJo"
+        }
+        function desvia(btn){
+            btn.style.position = 'absolute';
+            btn.style.bottom = posicao(10, 80);
+            btn.style.left = posicao (10,80);
+        }
+        function posicao(min, max){
+            return(Math.random()*(max - min) + min)+"%"
+        }
+    </script>
+</head>
+<body>
+    <div class="titulo">
+        <h1 class="tituloPrincipal">VOCÊ QUER SER MEU DOCINHO DE WHEY?</h1>
+    </div>
+    <div class="botoes">
+        <div class="botaoS">
+            <BUtton class="btn" onclick="sim()">óbvio</BUtton>
+        </div>
+        <div class="botaoN">
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">nop</button>
+        </div>
+    </div>
+    <div class="imagem">
+        <img class="cachorrinho" src="https://i.pinimg.com/736x/82/c4/7a/82c47a82b8704a11759fbcc3bc69b5bd.jpg" alt="">
+    </div>
+</body>
+</html>
